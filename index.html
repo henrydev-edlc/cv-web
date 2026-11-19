@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henrydev | Backend Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            arctic: '#F4FCFB',
+            frost: '#ACBCBF',
+            slateSteel: '#698696',
+            deepSlate: '#243C4C',
+            oceanBlue: '#5289AD',
+            abyss: '#182833'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-arctic text-deepSlate antialiased selection:bg-oceanBlue/20 selection:text-deepSlate">
+  <header class="sticky top-0 z-40 border-b border-frost/70 bg-arctic/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#inicio" class="font-mono text-base font-bold tracking-tight text-deepSlate">
+        Henry<span class="text-oceanBlue">Dev</span>
+      </a>
+      <nav class="hidden items-center gap-8 text-sm font-medium text-slateSteel md:flex">
+        <a href="#inicio" class="transition hover:text-deepSlate">Inicio</a>
+        <a href="#habilidades" class="transition hover:text-deepSlate">Habilidades</a>
+        <a href="#proyectos" class="transition hover:text-deepSlate">Proyectos</a>
+        <a href="#contacto" class="transition hover:text-deepSlate">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button
+          id="btn-print"
+          type="button"
+          class="rounded-lg border border-frost bg-white px-3.5 py-2 text-xs font-semibold text-deepSlate transition hover:border-oceanBlue hover:text-oceanBlue"
+        >
+          Exportar PDF
+        </button>
+        <a
+          href="#contacto"
+          class="rounded-lg bg-oceanBlue px-4 py-2 text-xs font-semibold text-arctic transition hover:bg-deepSlate"
+        >
+          Contacto
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="border-b border-frost/60 bg-gradient-to-br from-arctic via-arctic to-frost/30">
+      <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 lg:grid-cols-12 lg:py-24">
+        <div class="space-y-5 lg:col-span-7">
+          <div class="inline-flex items-center gap-2 rounded-full border border-frost bg-white px-3.5 py-1.5 font-mono text-xs font-medium text-oceanBlue">
+            <span>Backend Developer · 1 año de experiencia</span>
+          </div>
+          <h1 class="text-4xl font-extrabold leading-[1.08] tracking-tight text-deepSlate sm:text-5xl lg:text-6xl">
+            Backend
+            <span class="block text-oceanBlue">Developer</span>
+          </h1>
+          <p class="max-w-2xl text-base leading-relaxed text-slateSteel">
+            Desarrollador Backend con un año de experiencia, enfocado en crear soluciones de software escalables, mantenibles y con código limpio que cualquier otro desarrollador pueda entender. Mi principal motivación es digitalizar procesos y resolver problemas complejos a través de la programación.
+          </p>
+          <p class="max-w-2xl text-sm leading-relaxed text-slateSteel">
+            A lo largo de este tiempo, me he dedicado al diseño y desarrollo de microservicios utilizando herramientas como Spring Cloud, Docker, RabbitMQ, API Gateway y Resilience4j. Además, implemento soluciones de seguridad (authentication) y observabilidad utilizando OpenTelemetry/LGTM. Disfruto especialmente trabajar en la lógica de negocios, ya que es el núcleo donde se procesa la información.
+          </p>
+          <p class="max-w-2xl text-sm leading-relaxed text-slateSteel">
+            Disfruto del trabajo en equipo y de mantener una comunicación clara para resolver problemas de forma conjunta. A la par, estoy dedicando tiempo a explorar el desarrollo con agentes de IA (como Claude), buscando nuevas formas de potenciar mis flujos de trabajo y mantenerme actualizado en el sector.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a
+              href="#contacto"
+              class="rounded-lg bg-oceanBlue px-6 py-3 text-sm font-semibold text-arctic transition hover:bg-deepSlate"
+            >
+              Contactar
+            </a>
+            <a
+              href="#proyectos"
+              class="rounded-lg border border-frost bg-white px-6 py-3 text-sm font-semibold text-deepSlate transition hover:border-oceanBlue hover:text-oceanBlue"
+            >
+              Ver Proyectos
+            </a>
+          </div>
+        </div>
+
+        <div class="flex justify-center lg:col-span-5">
+          <div class="flex h-64 w-64 items-center justify-center rounded-full border-4 border-oceanBlue bg-deepSlate p-6 text-center text-arctic shadow-xl ring-8 ring-frost/50 sm:h-72 sm:w-72">
+            <div class="space-y-2">
+              <p class="font-mono text-xs uppercase tracking-widest text-frost">Backend Core</p>
+              <p class="text-xl font-bold text-arctic">Microservicios & APIs</p>
+              <p class="font-mono text-xs text-frost">Spring Cloud · RabbitMQ · API Gateway</p>
+              <div class="mx-auto my-2 h-px w-16 bg-oceanBlue"></div>
+              <p class="text-xs text-frost">Resilience4j · Authentication</p>
+              <p class="font-mono text-[11px] text-arctic/80">OpenTelemetry / LGTM · Docker · K8s · GCP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="perfil-detalle" class="mx-auto max-w-6xl px-6 py-14">
+      <div class="grid gap-4 rounded-2xl border border-frost bg-white p-6 shadow-sm md:grid-cols-2">
+        <div class="space-y-2.5 text-sm text-slateSteel">
+          <p><strong class="text-deepSlate">Formación académica:</strong> Egresado de Ingeniería en Sistemas Computacionales.</p>
+          <p><strong class="text-deepSlate">Conocimientos:</strong> Diseño de sistemas, integración de servicios, seguridad y persistencia de datos.</p>
+          <p><strong class="text-deepSlate">Tecnologías complementarias:</strong> Docker, Kubernetes, Google Cloud Platform y RabbitMQ.</p>
+        </div>
+        <div class="space-y-2.5 text-sm text-slateSteel">
+          <p><strong class="text-deepSlate">Aprendiendo actualmente:</strong> Agentes de Inteligencia Artificial y arquitecturas basadas en LLMs.</p>
+          <p><strong class="text-deepSlate">Intereses:</strong> Arquitectura de software, sistemas distribuidos y soluciones Cloud Native.</p>
+          <p><strong class="text-deepSlate">Inspiración:</strong> "Primero, resuelve el problema. Luego, escribe el código." - John Johnson</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="mx-auto max-w-6xl px-6 pb-20 pt-4">
+      <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+        <div>
+          <p class="font-mono text-xs font-semibold uppercase tracking-wider text-oceanBlue">Habilidades Técnicas</p>
+          <h2 class="mt-1 text-3xl font-bold tracking-tight text-deepSlate">Stack y Especialidades</h2>
+        </div>
+        <div id="skill-tabs" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <div id="skills-grid" class="grid gap-5 md:grid-cols-2 lg:grid-cols-3"></div>
+
+      <div class="mt-10 rounded-2xl border border-frost bg-white p-6 shadow-sm">
+        <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-deepSlate">
+          Arquitectura y Seguridad
+        </h3>
+        <ul id="arch-list" class="mt-3 grid gap-2 text-sm text-slateSteel sm:grid-cols-2"></ul>
+      </div>
+    </section>
+
+    <section id="proyectos" class="border-y border-frost/60 bg-frost/20 py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="font-mono text-xs font-semibold uppercase tracking-wider text-oceanBlue">Portafolio</p>
+            <h2 class="mt-1 text-3xl font-bold tracking-tight text-deepSlate">Proyectos Destacados</h2>
+          </div>
+          <div id="project-tabs" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <div id="projects-grid" class="grid gap-6 md:grid-cols-2"></div>
+      </div>
+    </section>
+
+    <section id="contacto" class="mx-auto max-w-6xl px-6 py-20">
+      <div class="grid gap-8 rounded-2xl border border-frost bg-deepSlate p-8 text-arctic shadow-lg lg:grid-cols-12 lg:p-10">
+        <div class="space-y-4 lg:col-span-6">
+          <p class="font-mono text-xs uppercase tracking-wider text-frost">Competencias, Logros y Contacto</p>
+          <h2 class="text-3xl font-bold text-arctic">Certámenes y Canales</h2>
+          <ul class="space-y-2 text-sm text-frost">
+            <li><strong class="text-arctic">CodingCup 2025</strong> · <strong class="text-arctic">CodingCup 2026</strong></li>
+            <li><strong class="text-arctic">ITSA Code Contest Internacional 2025</strong></li>
+            <li><strong class="text-arctic">Staff Quimera Team 2026</strong></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col justify-center space-y-3 lg:col-span-6">
+          <a
+            href="https://mail.google.com/mail/?view=cm&to=henrydev.edlc@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            class="flex items-center justify-between rounded-xl border border-slateSteel/40 bg-abyss px-5 py-3.5 text-sm transition hover:border-oceanBlue"
+          >
+            <span class="text-frost">Gmail</span>
+            <span class="font-mono text-xs font-semibold text-arctic">henrydev.edlc@gmail.com</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/enrique-dl-cruz/"
+            target="_blank"
+            rel="noreferrer"
+            class="flex items-center justify-between rounded-xl border border-slateSteel/40 bg-abyss px-5 py-3.5 text-sm transition hover:border-oceanBlue"
+          >
+            <span class="text-frost">LinkedIn</span>
+            <span class="font-mono text-xs font-semibold text-arctic">in/enrique-dl-cruz</span>
+          </a>
+          <a
+            href="https://github.com/henrydev-edlc"
+            target="_blank"
+            rel="noreferrer"
+            class="flex items-center justify-between rounded-xl border border-slateSteel/40 bg-abyss px-5 py-3.5 text-sm transition hover:border-oceanBlue"
+          >
+            <span class="text-frost">GitHub</span>
+            <span class="font-mono text-xs font-semibold text-arctic">github.com/henrydev-edlc</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-frost bg-arctic py-8">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-xs text-slateSteel sm:flex-row">
+      <p>Henrydev · Backend Developer</p>
+      <div class="flex items-center gap-5 font-mono">
+        <a href="https://mail.google.com/mail/?view=cm&to=henrydev.edlc@gmail.com" target="_blank" rel="noreferrer" class="transition hover:text-deepSlate">Gmail</a>
+        <a href="https://www.linkedin.com/in/enrique-dl-cruz/" target="_blank" rel="noreferrer" class="transition hover:text-deepSlate">LinkedIn</a>
+        <a href="https://github.com/henrydev-edlc" target="_blank" rel="noreferrer" class="transition hover:text-deepSlate">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

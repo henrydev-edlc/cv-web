@@ -1,0 +1,22 @@
+@media print {
+  header,
+  footer,
+  #skill-tabs,
+  #project-tabs,
+  #btn-print {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #243C4C !important;
+  }
+
+  section,
+  article {
+    background: #ffffff !important;
+    border-color: #ACBCBF !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+}
