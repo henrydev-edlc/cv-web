@@ -116,8 +116,8 @@ function renderSkillTabs() {
     .map((group) => {
       const isActive = group === activeSkillGroup;
       const cls = isActive
-        ? 'bg-oceanBlue text-arctic border-oceanBlue'
-        : 'bg-white text-slateSteel border-frost hover:border-oceanBlue hover:text-deepSlate';
+        ? 'bg-navyAccent text-paper border-navyAccent'
+        : 'bg-paper text-mutedText border-lineGray hover:border-forestAccent hover:text-forestAccent';
       return `<button type="button" data-skill-group="${group}" class="rounded-lg border px-3 py-1.5 text-xs font-semibold transition ${cls}">${group}</button>`;
     })
     .join('');
@@ -141,14 +141,14 @@ function renderSkillsGrid() {
   container.innerHTML = list
     .map(
       (block) => `
-      <article class="rounded-2xl border border-frost bg-white p-6 shadow-sm transition hover:border-oceanBlue">
-        <p class="font-mono text-[11px] font-semibold uppercase tracking-wider text-oceanBlue">${block.group}</p>
-        <h3 class="mt-1 text-lg font-bold text-deepSlate">${block.title}</h3>
+      <article class="rounded-2xl border border-lineGray bg-paper p-6 transition hover:border-navyAccent">
+        <p class="font-mono text-[11px] font-semibold uppercase tracking-wider text-forestAccent">${block.group}</p>
+        <h3 class="mt-1 text-lg font-bold text-inkBlack">${block.title}</h3>
         <div class="mt-4 flex flex-wrap gap-2">
           ${block.items
             .map(
               (tech) =>
-                `<span class="rounded-md bg-arctic px-2.5 py-1 font-mono text-xs font-medium text-deepSlate ring-1 ring-frost">${tech}</span>`
+                `<span class="rounded-md bg-softGray px-2.5 py-1 font-mono text-xs font-medium text-charcoal ring-1 ring-lineGray">${tech}</span>`
             )
             .join('')}
         </div>
@@ -161,7 +161,7 @@ function renderSkillsGrid() {
 function renderArchList() {
   const container = document.getElementById('arch-list');
   container.innerHTML = ARCH_ITEMS.map(
-    (text) => `<li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-oceanBlue"></span><span>${text}</span></li>`
+    (text) => `<li class="flex items-start gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-forestAccent"></span><span>${text}</span></li>`
   ).join('');
 }
 
@@ -173,8 +173,8 @@ function renderProjectTabs() {
     .map((cat) => {
       const isActive = cat === activeProjectCategory;
       const cls = isActive
-        ? 'bg-deepSlate text-arctic border-deepSlate'
-        : 'bg-white text-slateSteel border-frost hover:border-oceanBlue hover:text-deepSlate';
+        ? 'bg-charcoal text-paper border-charcoal'
+        : 'bg-paper text-mutedText border-lineGray hover:border-navyAccent hover:text-navyAccent';
       return `<button type="button" data-proj-cat="${cat}" class="rounded-lg border px-3.5 py-1.5 text-xs font-semibold transition ${cls}">${cat}</button>`;
     })
     .join('');
@@ -198,22 +198,22 @@ function renderProjectsGrid() {
   container.innerHTML = list
     .map(
       (proj) => `
-      <article class="flex flex-col justify-between rounded-2xl border border-frost bg-white p-6 shadow-sm transition hover:border-oceanBlue">
+      <article class="flex flex-col justify-between rounded-2xl border border-lineGray bg-paper p-6 transition hover:border-navyAccent">
         <div class="space-y-3">
           <div class="flex items-center justify-between gap-2">
-            <span class="font-mono text-xs font-semibold text-oceanBlue">${proj.category}</span>
-            <a href="${proj.url}" target="_blank" rel="noreferrer" class="font-mono text-xs font-semibold text-deepSlate transition hover:text-oceanBlue">
+            <span class="font-mono text-xs font-semibold text-navyAccent">${proj.category}</span>
+            <a href="${proj.url}" target="_blank" rel="noreferrer" class="font-mono text-xs font-semibold text-charcoal transition hover:text-forestAccent">
               Repositorio →
             </a>
           </div>
-          <h3 class="text-xl font-bold text-deepSlate">${proj.name}</h3>
-          <p class="text-sm leading-relaxed text-slateSteel">${proj.description}</p>
+          <h3 class="text-xl font-bold text-inkBlack">${proj.name}</h3>
+          <p class="text-sm leading-relaxed text-mutedText">${proj.description}</p>
         </div>
-        <div class="mt-5 flex flex-wrap gap-1.5 border-t border-frost/60 pt-4">
+        <div class="mt-5 flex flex-wrap gap-1.5 border-t border-lineGray pt-4">
           ${proj.stack
             .map(
               (tech) =>
-                `<span class="rounded-md bg-arctic px-2.5 py-1 font-mono text-[11px] font-medium text-deepSlate ring-1 ring-frost">${tech}</span>`
+                `<span class="rounded-md bg-softGray px-2.5 py-1 font-mono text-[11px] font-medium text-charcoal ring-1 ring-lineGray">${tech}</span>`
             )
             .join('')}
         </div>

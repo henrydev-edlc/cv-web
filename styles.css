@@ -8,14 +8,14 @@
   }
 
   body {
-    background: #ffffff !important;
-    color: #243C4C !important;
+    background: #FFFFFF !important;
+    color: #111315 !important;
   }
 
   section,
   article {
-    background: #ffffff !important;
-    border-color: #ACBCBF !important;
+    background: #FFFFFF !important;
+    border-color: #D4D8DD !important;
     box-shadow: none !important;
     break-inside: avoid;
   }
